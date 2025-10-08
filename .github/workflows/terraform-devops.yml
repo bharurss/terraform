@@ -19,7 +19,7 @@ env:
   
 jobs:
   scan-terraform-config:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: Scan Terraform with Checov
     steps:
       - name: Checkout repo
@@ -33,7 +33,7 @@ jobs:
           soft_fail: true  
   deploy-azure-infra-terraform:
     name: Deploy to Azure with Terraform
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     environment: production
     needs: [scan-terraform-config]
 
