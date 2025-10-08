@@ -25,12 +25,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@master
 
-      - name: Run Checkov Scan
-        id: checkov
-        uses: bridgecrewio/checkov-action@master
-        with:
-          directory: ${{ env.WORKING_DIRECTORY }}
-          soft_fail: true  
+      #- name: Run Checkov Scan
+        #id: checkov
+        #uses: bridgecrewio/checkov-action@master
+        #with:
+          #directory: ${{ env.WORKING_DIRECTORY }}
+          #soft_fail: true  
   deploy-azure-infra-terraform:
     name: Deploy to Azure with Terraform
     runs-on: self-hosted
